@@ -18,8 +18,7 @@ const PrincipalCard: React.FC<PrincipalCardProps> = ({ principal, names }) => {
   return (
     <div className="p-4 border rounded-lg shadow-md">
       <strong className="text-indigo-800">{getActorName(principal.nconst)}</strong>
-      <p>{principal.category}</p>
-
+      <p>{principal.category.replace(/_/g, " ")}</p>
       {characterNames.length > 0 ? (
         <p>🎭 as {characterNames.join(", ")}</p>
       ) : (
